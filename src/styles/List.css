@@ -1,0 +1,18 @@
+.listcategory {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 1000px;
+  margin: 50px auto;
+  padding: 0 20px;
+  font-size: 2rem;
+}
+
+#category {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e1e1e;
+  margin: 20px 0;
+  padding: 10px;
+}
