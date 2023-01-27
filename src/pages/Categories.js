@@ -1,12 +1,10 @@
 import React from 'react';
-import List from '../components/List';
+import '../styles/Categories.css';
 
-const Categories = () => {
-  return (
-    <div>
-      <List />
-    </div>
-  );
-};
+const Categories = () => (
+  <button type="button" className="update">
+    Check Status
+  </button>
+);
 
 export default Categories;
