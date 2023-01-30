@@ -1,6 +1,6 @@
-import { createReducer, createAction } from '@reduxjs/toolkit';
+import { createReducer } from '@reduxjs/toolkit';
 
-export const CHECK_STATUS = createAction('categories/check_status');
+export const CHECK_STATUS = 'categories/check_status';
 
 const initialState = {
   status: '',
