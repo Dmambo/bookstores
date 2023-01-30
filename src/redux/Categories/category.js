@@ -1,6 +1,6 @@
 import { createReducer } from '@reduxjs/toolkit';
 
-export const CHECK_STATUS = 'categories/check_status';
+export const CHECK_STATUS = 'bookstore/categories/CHECK_STATUS';
 
 const initialState = {
   status: '',
