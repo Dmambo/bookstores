@@ -1,16 +1,18 @@
-import { createReducer } from '@reduxjs/toolkit';
+import { createReducer, createAction } from '@reduxjs/toolkit';
+
+export const ADD_BOOK = createAction('books/add');
+export const REMOVE_BOOK = createAction('book/remove');
 
 const initialState = {
   books: [],
 };
 
 const bookReducer = createReducer(initialState, (construct) => {
-  construct.addCase('CREATE_BOOK', (state, action) => {
+  construct.addCase(ADD_BOOK, (state, action) => {
     state.books.push(action.payload);
   });
-  construct.addCase('REMOVE_BOOK', (state, action) => {
-    /* eslint-disable no-param-reassign */
-    state.books = state.books.filter((book) => book.id !== action.payload);
+  construct.addCase(REMOVE_BOOK, (state, action) => {
+    state.books.filter((book) => book.id !== action.payload);
   });
   construct.addDefaultCase((state) => state);
 });

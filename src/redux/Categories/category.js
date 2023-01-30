@@ -1,13 +1,16 @@
-import { createReducer } from '@reduxjs/toolkit';
+import { createReducer, createAction } from '@reduxjs/toolkit';
+
+export const CHECK_STATUS = createAction('categories/check_status');
 
 const initialState = {
-  categories: '',
+  status: '',
 };
 
 const categoryReducer = createReducer(initialState, (construct) => {
-  construct.addCase('CHECK_STATUS', (state) => {
-    const newStatus = [...state, { status: 'still under production' }];
-    return newStatus;
+  construct.addCase(CHECK_STATUS, (state) => {
+    const newState = { ...state, status: 'Under Constraction' };
+
+    return newState;
   });
   construct.addDefaultCase((state) => state);
 });
