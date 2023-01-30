@@ -1,7 +1,7 @@
-import { createReducer, createAction } from '@reduxjs/toolkit';
+import { createReducer } from '@reduxjs/toolkit';
 
-export const ADD_BOOK = createAction('books/add');
-export const REMOVE_BOOK = createAction('book/remove');
+export const ADD_BOOK = 'bookstore/books/ADD_BOOK';
+export const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK';
 
 const initialState = {
   books: [],
