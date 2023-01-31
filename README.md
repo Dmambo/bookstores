@@ -44,9 +44,9 @@ REACT
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
+- **[ADD BOOK TO STORE]**
 
-- **[PERFORM MATH OPERATION]**
+  - [Description] ADD BOOK TO STORE AND GET BOOKS FROM API
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -130,6 +130,16 @@ Example command:
 - LinkedIn: [LinkedIn](https://linkedin.com/in/Diaby mohammed ibrahim)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- Future Features -->
+
+## 🔭 Future Features <a name="Future Features"></a>
+
+> Add future features that you plan to implement in the project.
+
+- **[CONNECT TO API]**
+
+  - [Description] WOULD BE ABLE TO CONNECT TO API TO GET THE BOOKS FROM THE API
 
 <!-- CONTRIBUTING -->
 
