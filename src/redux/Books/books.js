@@ -1,20 +1,57 @@
 import { createReducer } from '@reduxjs/toolkit';
 
-export const ADD_BOOK = 'bookstore/books/ADD_BOOK';
-export const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK';
+export const ADD_BOOK = 'redux/Books/ADD_BOOK';
+export const REMOVE_BOOK = 'redux/Books/REMOVE_BOOK';
 
 const initialState = {
-  books: [],
+  books: [
+    {
+      id: '1',
+      title: 'The Hunger Games',
+      author: 'Suzanne Collins',
+      category: 'Action',
+    },
+    {
+      id: '2',
+      title: 'Dune',
+      author: 'Frank Herbert',
+      category: 'Science Fiction',
+    },
+  ],
 };
 
-const bookReducer = createReducer(initialState, (construct) => {
-  construct.addCase(ADD_BOOK, (state, action) => {
-    state.books.push(action.payload);
-  });
-  construct.addCase(REMOVE_BOOK, (state, action) => {
-    state.books.filter((book) => book.id !== action.payload);
-  });
-  construct.addDefaultCase((state) => state);
+// Actions
+
+export const addBook = (book) => ({
+  type: ADD_BOOK,
+  payload: book,
+});
+
+export const removeBook = (id) => ({
+  type: REMOVE_BOOK,
+  payload: id,
+});
+
+// Reducer
+
+const bookReducer = createReducer(initialState, {
+  [ADD_BOOK]: (state, action) => {
+    const newState = {
+      ...state,
+      books: [
+        ...state.books,
+        { ...action.payload, id: `${state.books.length + 1}` },
+      ],
+    };
+    return newState;
+  },
+  [REMOVE_BOOK]: (state, action) => {
+    const newState = {
+      ...state,
+      books: state.books.filter((book) => book.id !== action.payload),
+    };
+    return newState;
+  },
 });
 
 export default bookReducer;
