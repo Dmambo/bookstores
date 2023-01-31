@@ -26,11 +26,11 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 MATH MAGICIAN <a name="about-project"></a>
+# 📖 BOOK STORE <a name="about-project"></a>
 
-> THIS IS A REACT PROJECT APP
+> THIS IS A REACT-REDUX PROJECT APP
 
-**[MATH MAGICIAN]** MATH MAGICIAN
+**[BOOK STORE]** BOOK STORE
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -38,15 +38,15 @@ REACT
 
 ### Tech Stack <a name="tech-stack"></a>
 
-> REACT
+> REACT-REDUX
 
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
+- **[ADD BOOK TO STORE]**
 
-- **[PERFORM MATH OPERATION]**
+  - [Description] ADD BOOK TO STORE AND GET BOOKS FROM API
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -83,7 +83,7 @@ clone this repository into your desired folder
 
 ```sh
   cd my-folder
-  https://github.com/Dmambo/math-magician.git
+  https://github.com/Dmambo/bookstores.git
 ```
 --->
 
@@ -95,7 +95,7 @@ Install this project with:
 download the packages
 
 ```sh
-  cd math-magician
+  cd bookstores
   npm install
 ```
 install other dependencies
@@ -130,6 +130,16 @@ Example command:
 - LinkedIn: [LinkedIn](https://linkedin.com/in/Diaby mohammed ibrahim)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- Future Features -->
+
+## 🔭 Future Features <a name="Future Features"></a>
+
+> Add future features that you plan to implement in the project.
+
+- **[CONNECT TO API]**
+
+  - [Description] WOULD BE ABLE TO CONNECT TO API TO GET THE BOOKS FROM THE API
 
 <!-- CONTRIBUTING -->
 
