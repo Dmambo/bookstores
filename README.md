@@ -26,11 +26,11 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 MATH MAGICIAN <a name="about-project"></a>
+# 📖 BOOK STORE <a name="about-project"></a>
 
-> THIS IS A REACT PROJECT APP
+> THIS IS A REACT-REDUX PROJECT APP
 
-**[MATH MAGICIAN]** MATH MAGICIAN
+**[BOOK STORE]** BOOK STORE
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -38,7 +38,7 @@ REACT
 
 ### Tech Stack <a name="tech-stack"></a>
 
-> REACT
+> REACT-REDUX
 
 <!-- Features -->
 
@@ -83,7 +83,7 @@ clone this repository into your desired folder
 
 ```sh
   cd my-folder
-  https://github.com/Dmambo/math-magician.git
+  https://github.com/Dmambo/bookstores.git
 ```
 --->
 
@@ -95,7 +95,7 @@ Install this project with:
 download the packages
 
 ```sh
-  cd math-magician
+  cd bookstores
   npm install
 ```
 install other dependencies
