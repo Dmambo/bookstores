@@ -1,17 +1,23 @@
 import React, { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { useDispatch } from 'react-redux';
-import { addBook } from '../redux/Books/books';
+import { addBook } from '../redux/Api/api';
 import '../styles/Addbook.css';
 
 const Addbook = () => {
-  const [formData, setFormData] = useState({ id: '', title: '', author: '' });
+  const [formData, setFormData] = useState({
+    item_id: '',
+    title: '',
+    author: '',
+    category: '',
+  });
 
-  const handleDataChange = (event) => {
+  const handleDataChange = (e) => {
     setFormData({
       ...formData,
-      id: uuidv4(),
-      [event.target.name]: event.target.value,
+      item_id: uuidv4(),
+      [e.target.name]: e.target.value,
+      category: 'Category Action',
     });
   };
 
@@ -20,7 +26,12 @@ const Addbook = () => {
   const onSubmitHandler = (e) => {
     e.preventDefault();
     dispatch(addBook(formData));
-    setFormData({ id: '', title: '', author: '' });
+    setFormData({
+      item_id: '',
+      title: '',
+      author: '',
+      category: '',
+    });
   };
 
   return (
