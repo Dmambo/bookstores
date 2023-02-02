@@ -2,12 +2,14 @@ import React from 'react';
 import '../styles/Categories.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { checkStatus } from '../redux/Categories/category';
+import Navigation from '../components/Navigation';
 
 const Categories = () => {
-  const selectedCategories = useSelector(
-    // eslint-disable-next-line comma-dangle
-    (state) => state.categories.categories[0]
-  );
+  const selectedCategories = useSelector((state) => state.categories.status);
+  let Construction;
+  if (selectedCategories && selectedCategories !== '') {
+    Construction = selectedCategories;
+  }
   const dispatch = useDispatch();
 
   const handleClick = () => {
@@ -15,12 +17,19 @@ const Categories = () => {
   };
 
   return (
-    <div className="updated">
-      <h2>{selectedCategories}</h2>
-      <button type="button" onClick={handleClick}>
-        Check status
-      </button>
-    </div>
+    <>
+      <div className="cat">
+        <div className="updated">
+          <div className="nav"><Navigation /></div>
+          <div className="construction">
+            <h2>{Construction}</h2>
+            <button type="button" onClick={handleClick} className="updatebtn">
+              Check status
+            </button>
+          </div>
+        </div>
+      </div>
+    </>
   );
 };
 

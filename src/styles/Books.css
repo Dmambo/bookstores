@@ -1,4 +1,4 @@
-.cat {
+.books {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,25 +8,13 @@
   margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
-  padding: 0;
+  padding: 0 35px 40px;
   background-color: #fafafa;
 }
 
-.nav {
-  width: 97%;
-}
-
-.updated {
+.BOOKS {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 98%;
-}
-
-.construction {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 50px auto;
+  width: 95%;
 }

@@ -17,7 +17,6 @@ const Addbook = () => {
       ...formData,
       item_id: uuidv4(),
       [e.target.name]: e.target.value,
-      category: 'Category Action',
     });
   };
 
@@ -52,6 +51,15 @@ const Addbook = () => {
           value={formData.author}
           onChange={handleDataChange}
         />
+        <select name="category" value={formData.category} onChange={handleDataChange} className="categorry">
+          <option value="Action">Action</option>
+          <option value="Biography">Biography</option>
+          <option value="History">History</option>
+          <option value="Horror">Horror</option>
+          <option value="Kids">Kids</option>
+          <option value="Learning">Learning</option>
+          <option value="Sci-Fi">Sci-Fi</option>
+        </select>
         <button type="submit">Add Book</button>
       </form>
     </div>

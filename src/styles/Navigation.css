@@ -5,6 +5,7 @@ nav {
   padding: 2rem;
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
 }
 
 .links {
@@ -36,4 +37,12 @@ nav {
 
 .active {
   color: #343333;
+}
+
+.user {
+  /* background-color: aqua; */
+  padding: 10px;
+  border-radius: 50%;
+  border: 1px solid rgba(15, 15, 15, 0.5);
+  margin-right: 50px;
 }

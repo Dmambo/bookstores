@@ -1,27 +1,18 @@
-export const CHECK_STATUS = 'bookstore/categories/CHECK_STATUS';
+import { createReducer, createAction } from '@reduxjs/toolkit';
+
+export const checkStatus = createAction('categories/checkStatus');
 
 const initialState = {
-  categories: [],
+  status: '',
 };
 
-// Actions
+const categoryReducer = createReducer(initialState, (builder) => {
+  builder.addCase(checkStatus, (state) => {
+    const nwState = { ...state, status: 'Under Construction' };
 
-export const checkStatus = () => ({
-  type: CHECK_STATUS.BOOK_STATUS_CHECK,
+    return nwState;
+  });
+  builder.addDefaultCase((state) => state);
 });
-
-// Reducer
-
-const categoryReducer = (state = initialState, action) => {
-  switch (action.type) {
-    case CHECK_STATUS.BOOK_STATUS_CHECK:
-      return {
-        ...state,
-        categories: [...state.categories, 'Under construction'],
-      };
-    default:
-      return state;
-  }
-};
 
 export default categoryReducer;

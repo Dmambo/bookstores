@@ -13,6 +13,18 @@ const Booklist = ({
     dispatch(removeBook(id));
   };
 
+  const percentage = Math.floor(Math.random() * 90 + 10);
+  const randomChapter = Math.floor(Math.random() * 10 + 1);
+
+  const adjectives = ['Dark', 'Mystical', 'Enchanted', 'Forgotten', 'Whispers'];
+  const nouns = ['Secrets', 'Worlds', 'Legends', 'Dreams', 'Fables'];
+
+  const generateChapterName = () => {
+    const randomAdjective = adjectives[Math.floor(Math.random() * adjectives.length)];
+    const randomNoun = nouns[Math.floor(Math.random() * nouns.length)];
+    return ` "${randomAdjective} of ${randomNoun}"`;
+  };
+
   return (
     <li className="booklist-item">
       <div className="bookdetails">
@@ -34,30 +46,24 @@ const Booklist = ({
           <div className="progress-bar-outer">
             <div className="progress-bar-inner" />
           </div>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            version="1.1"
-            width="160px"
-            height="160px"
-          >
-            <defs>
-              <linearGradient id="GradientColor">
-                <stop offset="0%" stopColor="#e91e63" />
-                <stop offset="100%" stopColor="#673ab7" />
-              </linearGradient>
-            </defs>
-            <circle cx="80" cy="80" r="70" strokeLinecap="round" />
-          </svg>
         </div>
         <div className="progress-percentage">
-          64%
+          {percentage}
+          %
           <span>Completed</span>
         </div>
       </div>
       <span className="vrr" />
       <div className="chapter">
         <div className="current">CURRENT CHAPTER</div>
-        <div className="chapters">Chapter 17</div>
+        <div className="chapters">
+          Chapter
+          {' '}
+          {randomChapter}
+          {' '}
+          :
+          {generateChapterName()}
+        </div>
         <button type="button" className="update">
           UPDATE PROGRESS
         </button>
