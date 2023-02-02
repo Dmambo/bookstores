@@ -2,7 +2,20 @@ import axios from 'axios';
 import { createAsyncThunk, createReducer } from '@reduxjs/toolkit';
 
 const initialState = {
-  books: [],
+  books: [
+    {
+      id: '1',
+      title: 'The Hunger Games',
+      author: 'Suzanne Collins',
+      category: 'Action',
+    },
+    {
+      id: '2',
+      title: 'Dune',
+      author: 'Frank Herbert',
+      category: 'Science Fiction',
+    },
+  ],
 };
 
 const apiurl = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/wpvYJWQOuKGfWfhfsjZe/books';
