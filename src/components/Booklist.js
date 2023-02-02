@@ -2,10 +2,11 @@ import React from 'react';
 import '../styles/Booklist.css';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { removeBook } from '../redux/Books/books';
+import { removeBook } from '../redux/Api/api';
 
-const Booklist = (props) => {
-  const { Title, Author, id } = props;
+const Booklist = ({
+  Title, Author, id, category,
+}) => {
   const dispatch = useDispatch();
 
   const handleRemove = () => {
@@ -15,7 +16,7 @@ const Booklist = (props) => {
   return (
     <li className="booklist-item">
       <div className="bookdetails">
-        <div className="genre">Action</div>
+        <div className="genre">{category}</div>
         <div className="title">{Title}</div>
         <div className="author">{Author}</div>
         <div className="interact">
@@ -69,6 +70,7 @@ Booklist.propTypes = {
   Title: PropTypes.string.isRequired,
   Author: PropTypes.string.isRequired,
   id: PropTypes.number.isRequired,
+  category: PropTypes.string.isRequired,
 };
 
 export default Booklist;
