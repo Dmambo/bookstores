@@ -56,7 +56,7 @@ REACT
 
 > Site is still in production and can't be deployed for now
 
-- [Live Demo Link](https://yourdeployedapplicationlink.com)
+- [Live Demo Link](https://bookstores.onrender.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
