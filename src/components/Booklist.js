@@ -3,6 +3,9 @@ import '../styles/Booklist.css';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { removeBook } from '../redux/Api/api';
+import comment from '../assets/comment.png';
+import dustbin from '../assets/dustbin.png';
+import edit from '../assets/edit.png';
 
 const Booklist = ({
   Title, Author, id, category,
@@ -13,15 +16,21 @@ const Booklist = ({
     dispatch(removeBook(id));
   };
 
+  const handleEdit = () => {
+  };
+
   const percentage = Math.floor(Math.random() * 90 + 10);
   const randomChapter = Math.floor(Math.random() * 10 + 1);
 
-  const adjectives = ['Dark', 'Mystical', 'Enchanted', 'Forgotten', 'Whispers'];
+  const adjectives = ['Dark', 'Mystical', 'Enchanted', 'Forgotten', 'Whispers', 'Introduction'];
   const nouns = ['Secrets', 'Worlds', 'Legends', 'Dreams', 'Fables'];
 
   const generateChapterName = () => {
     const randomAdjective = adjectives[Math.floor(Math.random() * adjectives.length)];
     const randomNoun = nouns[Math.floor(Math.random() * nouns.length)];
+    if (randomAdjective === 'Introduction') {
+      return randomAdjective;
+    }
     return ` "${randomAdjective} of ${randomNoun}"`;
   };
 
@@ -32,13 +41,28 @@ const Booklist = ({
         <div className="title">{Title}</div>
         <div className="author">{Author}</div>
         <div className="interact">
-          <div className="comment">Comments</div>
+          <button type="button" className="comment">
+            <span>
+              <img src={comment} alt="comment" />
+            </span>
+            Comments
+
+          </button>
           <span className="vr" />
           <button type="button" onClick={handleRemove} className="remove">
+            <span>
+              <img src={dustbin} alt="dustbin" />
+            </span>
             Remove
           </button>
           <span className="vr" />
-          <div className="edit">Edit</div>
+          <button type="button" onClick={handleEdit} className="edit">
+            <span>
+              <img src={edit} alt="edit" />
+            </span>
+            Edit
+
+          </button>
         </div>
       </div>
       <div className="progress">

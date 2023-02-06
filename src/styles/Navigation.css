@@ -3,46 +3,65 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 2rem;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.789);
+  box-shadow: 0 0 10px rgb(76, 154, 255);
   width: 100%;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
 }
 
 .links {
   display: flex;
-  justify-content: space-between;
-  gap: 60px;
-  align-items: center;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  gap: 40px;
+  /* align-items: center; */
   margin: 0 34px;
 }
 
 .Logo {
   font-size: 3rem;
+  display: flex;
   font-weight: 700;
-  color: #0290ff;
+  color: #fdeda5;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+
+.store {
+  color: #fc6d87;
+} 
+
+.Logo span img {
+  width: 50px;
+  height: 50px;
 }
 
 .navbar {
   display: flex;
   gap: 20px;
-  align-items: center;
+  /* align-items: center; */
   font-size: 1.5rem;
   font-weight: 500;
+  float: left;
+
 }
 
 .list {
   text-decoration: none;
-  color: rgb(107, 106, 106);
+  color: rgb(255, 255, 255);
 }
 
 .active {
-  color: #343333;
+  color: #16799a;
 }
 
 .user {
-  /* background-color: aqua; */
   padding: 10px;
   border-radius: 50%;
   border: 1px solid rgba(15, 15, 15, 0.5);
   margin-right: 50px;
+  background-color: #307bbe;
 }
