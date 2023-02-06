@@ -13,9 +13,7 @@ nav {
 .links {
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; */
   gap: 40px;
-  /* align-items: center; */
   margin: 0 34px;
 }
 
@@ -42,7 +40,6 @@ nav {
 .navbar {
   display: flex;
   gap: 20px;
-  /* align-items: center; */
   font-size: 1.5rem;
   font-weight: 500;
   float: left;
