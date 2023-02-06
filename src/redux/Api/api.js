@@ -51,6 +51,13 @@ export const removeBook = createAsyncThunk(
   },
 );
 
+export const editBook = createAsyncThunk(
+  'books/editBook',
+  async (payload, thunkAPI) => {
+    await axios.put(`${apiurl}/${payload.id}`, payload);
+    return thunkAPI.dispatch(fetchBooks());
+  },
+);
 // Reducer
 
 const bookReducer = createReducer(initialState, {

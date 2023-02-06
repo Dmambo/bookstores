@@ -3,13 +3,11 @@
   flex-direction: column;
   justify-content: center;
   width: 95%;
-
-  /* max-width: 85%; */
-
-  /* margin: 0 250px; */
-
-  /* padding: 0 20px; */
   border-top: 4px solid rgba(128, 128, 128, 0.511);
+}
+
+.addbook h2 {
+  color: rgb(255, 255, 255);
 }
 
 .addbook-title {
@@ -36,6 +34,6 @@ input,
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
-  width: 500px;
+  width: 470px;
   margin-right: 10px;
 }

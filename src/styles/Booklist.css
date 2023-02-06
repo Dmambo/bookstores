@@ -20,9 +20,11 @@
   display: flex;
   justify-content: space-between;
   padding: 20px 30px;
-  background-color: #fff;
+  background-color: #fdeda5;
   border: 0.5px solid rgba(210, 207, 207, 0.879);
   margin: 30px 0;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgb(85, 109, 53);
 }
 
 .bookdetails {
@@ -52,9 +54,9 @@
 }
 
 .author {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 700;
-  color: #307bbe;
+  color: #f76d87;
   margin-bottom: 10px;
 }
 
@@ -63,16 +65,45 @@
   display: flex;
   justify-content: space-between;
   margin: 10px 0;
-  color: #307bbe;
+  color: #200cd4;
   font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.comment {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.comment:hover {
+  font-weight: 700;
 }
 
 .remove {
-  background-color: #fff;
-  border: none;
-  color: #307bbe;
-  font-size: 1.2rem;
-  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.remove:hover {
+  font-weight: 700;
+}
+
+.edit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.edit:hover {
+  font-weight: 700;
 }
 
 .vr {
@@ -104,7 +135,7 @@
   transform: rotate(45deg);
   border-radius: 50%;
   border: 5px solid;
-  border-color: rgb(48, 123, 190) rgb(48, 123, 190) rgb(48, 123, 190) rgb(232, 232, 232);
+  border-color: rgb(37, 205, 51) rgb(37, 205, 51) rgb(37, 205, 51) rgb(232, 232, 232);
   border-image: initial;
 }
 
